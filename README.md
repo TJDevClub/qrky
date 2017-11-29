@@ -2,6 +2,8 @@
 
 Greetings, intrepid web developer. We're going to be building a Django app today, and it's going to be a party.
 
+> __Note__: If you're using [Director](https://director.tjhsst.edu), read [Director.md](Director.md) for important alterations.
+
 ## Step 1: create a virtual environment
 
 A virtualenv helps sandbox Python versions, packages, and package dependencies. Create a virtualenv with
