@@ -116,7 +116,7 @@ from django.shortcuts import render
 
 
 def index(request):
-    return render(request, 'index.html')
+    return render(request, 'qrcode/index.html')
 ```
 
 That was so easy. But now you probably have another question. What does `render` do?
@@ -130,7 +130,7 @@ Templates are just normal files. Generally, you put them in the `templates/` dir
 In our case, our first template is just an HTML that will be shown at the web app root.
 
 ```html
-<!-- qrky/templates/index.html -->
+<!-- qrky/templates/qrcode/index.html -->
 
 <!DOCTYPE html>
 <html>
@@ -153,7 +153,7 @@ In addition, we need to add the `templates/` directory to our list of template p
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'], # this is the relevant line
+        'DIRS': [os.path.join(BASE_DIR, 'templates')], # this is the relevant line
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
